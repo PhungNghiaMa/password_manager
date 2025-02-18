@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  overflow: hidden;
+}
+
+.Container{
+  widows: 100%;
+  width: 100%;
+  background: whitesmoke;
+}
+
+.KeywordContainer ,.LogoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+
+.LogoContainer h1{
+  font-size: 3.5rem;
+  font-weight: 530;
+  font-style: italic;
+  font-family: 'Bely';
+  letter-spacing: .15rem;
+}
+
+
+.KeywordContainer span{
+  letter-spacing: .2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  animation: blink-caret .5ms step-end ease-in-out;
+  padding-top: .05vmin;
+  font-style: italic;
+}
+
+.Caret{
+  color: gainsboro;
+  border-radius: 3%;
+}
+
+
+
+@keyframes blink-caret{
+  from, to { border-color: transparent }
+}
+
+/*  Hide the Eye icon, which is use to show the password in Edge and cause the overlay which the defined icon */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear{
+  display: none;
+}
+
+
