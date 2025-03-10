@@ -1,10 +1,60 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 
 body{
     widows: 100%;
     width: 100%;
     height: 100%;
+    background: linear-gradient(90deg, #e6e7e9 10%, rgb(212, 212, 212) 90%);
     overflow: hidden;
 }
+
+body::-webkit-perspective {
+    perspective: 400px;
+}
+
+.triangle {
+    transition: transform 0.2s ease-out; /* Smooth rotation */
+    font-size: xx-small;
+}
+  
+.rotate-180 {
+    transform: rotate(-90deg);
+}
+
+.OptionContainer{
+    scrollbar-width:thin;
+    scrollbar-color: black transparent;
+}
+
+
+.AddBtn{
+    box-shadow: 0px 5px 5px rgb(193, 192, 192);
+    border: 1px solid rgb(200, 197, 197);
+}
+
+.AddBtn:hover{
+    box-shadow: 2px 5px 5px rgb(149, 149, 149);
+    border: 1px solid rgb(200, 197, 197);
+}
+.SubContainer{
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scrollbar-color: rgb(17, 24, 37) transparent;
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+    .ContentContainer{
+        height: calc(88.5vh);
+    }
+    .TableContainer{
+        height: calc(89%);
+    }
+    .TableBody{
+        height: calc(80%);
+    }
+}
+
+
+
